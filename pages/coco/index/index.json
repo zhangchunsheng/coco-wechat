@@ -1,0 +1,10 @@
+{
+"navigationBarTitleText": "coco",
+  "usingComponents": {
+    "address-list": "/components/address-list/list",
+    "Btn": "/components/button/button",
+    "Modal": "/components/modal/modal",
+    "i-action-sheet": "../../../iview/action-sheet/index",
+    "i-toast": "../../../iview/toast/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "coco",
+    "usingComponents": {
+        "List": "/components/search_result_list/list"
+      }
+
+}

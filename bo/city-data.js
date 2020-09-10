@@ -1,0 +1,1 @@
+export const cocoCityList={"cityList":{"bj":{"city_short":"bj","en":"beijing","name":"北京","is_oversea":0,"position":{"lng":116.458637,"lat":39.955538}}},"version":"20200506"};
