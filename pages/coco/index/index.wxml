@@ -5,7 +5,6 @@
       <address-list icon_color="28D79B" data-flag="1" bind:clickevent="chooseAddress" rightText="{{currentAddress}}"
         leftText="当前定位" rightDefault="{{rightDefault}}" rightActive="{{rightActive1}}" />
       <view class="diy_line"></view>
-      <view class="diy_line_1"></view>
     </view>
     <Btn my-class="coco {{coco_ready==false ? 'cocoNot' : 'cocoNow' }}" content="{{cocoBtnTips}}"
       bind:myevent="coco" />
