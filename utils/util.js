@@ -38,7 +38,7 @@ function request(url, data = {}, method = "GET") {
       method: method,
       header: {
         'Content-Type': 'application/json',
-        'X-Yopsaas-Token': wx.getStorageSync('token')
+        'X-Coco-Token': wx.getStorageSync('token')
       },
       success: function(res) {
         if (res.statusCode == 200) {
