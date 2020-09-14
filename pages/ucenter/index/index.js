@@ -15,11 +15,6 @@ Page({
       unrecv: 0,
       uncomment: 0
     },
-    rideorder: {
-      unpaid: 0,
-      currentTrip: 0,
-      historyTrip: 0
-    },
     phoneBtnShow: true,
     hasLogin: false
   },
@@ -57,8 +52,7 @@ Page({
       util.request(api.UserIndex).then(function(res) {
         if (res.errno === 0) {
           that.setData({
-            order: res.data.order,
-            rideorder: res.data.rideorder
+            order: res.data.order
           });
         }
       });
