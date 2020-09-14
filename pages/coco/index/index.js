@@ -44,7 +44,7 @@ Page({
     },
     onHide:function(){
         this.setData({
-            showTravelling:false
+
         })
     },
     onShow: function() {
@@ -103,39 +103,9 @@ Page({
         let hasLogin = wx.getStorageSync('hasLogin');
         if (app.globalData.hasLogin || hasLogin) {
             app.globalData.hasLogin = true;
-            // 是否有正在行程中的订单
-            util.request(api.YopGetCurrentAndUnpayOrder, {}).then(function(res) {
-              if (res.errno === 0) {
-                let currentTrip = res.data.current_trip;
-                let unpayTrip = res.data.unpay_trip;
-                if(currentTrip && currentTrip.length >= 1) {
-                    // 行程状态标题
-                    let orderStatusTip = orderStatusTips[currentTrip[0].order.status];
-                    vm.setData({
-                        showTravelling: true,
-                        travelling_result: currentTrip[0],
-                        orderStatusTip
-                    })
-                } else {
-                    vm.setData({
-                        showTravelling: false,
-                        travelling_result: {},
-                        orderStatusTip: ''
-                    })
-                }
-              } else {
-                vm.setData({
-                    showTravelling: false,
-                    travelling_result: {},
-                    orderStatusTip: ''
-                })
-              }
-            });
         } else {
             vm.setData({
-                showTravelling: false,
-                travelling_result: {},
-                orderStatusTip: ''
+
             })
         }
     },
